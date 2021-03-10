@@ -20,6 +20,6 @@ Open [https://www.figma.com/file/O4gyI8dpldJZpJKSLYINfj/CSS-Homework?node-id=0%3
 ### 4. Add styles to app matching template design
 Add styles however you want to. Main file and styles are in `app` directory.
 
-### 4. Push your branch
+### 5. Push your branch
 Push your branch to remote repository, so we can have a look.
 
