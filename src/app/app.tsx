@@ -1,14 +1,13 @@
-import './app.css';
+import { ThemeProvider } from 'styled-components'
+
+import { Navbar } from '../components/navbar'
+import { GlobalStyle, theme } from '../components/theme'
 
 export const App = () => {
   return (
-    <nav>
-      <ul>
-        <li>Dashboard</li>
-        <li>Account</li>
-        <li>Payments</li>
-        <li>Settings</li>
-      </ul>
-    </nav>
-  );
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Navbar />
+    </ThemeProvider>
+  )
 }
