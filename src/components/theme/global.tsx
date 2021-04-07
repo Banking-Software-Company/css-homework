@@ -3,6 +3,7 @@ import { css, createGlobalStyle } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
   * {
     outline: none;
+    box-sizing: border-box;
   }
   html {
     font-size: 16px;
@@ -20,8 +21,15 @@ export const GlobalStyle = createGlobalStyle`
 
 export const screen = {
   small:(...args) => css`
-    @media only screen and (max-width: ${({ theme }) => theme.breakpoint}) {
+    @media only screen and (max-width: ${({ theme }) => theme.breakpoint[0]}) {
       ${args}
     }
-  `
+  `,
+  medium:(...args) => css`
+    @media only screen
+    and (min-width: calc(${({ theme }) => theme.breakpoint[0]} + 1px))
+    and (max-width: ${({ theme }) => theme.breakpoint[1]}) {
+      ${args}
+    }
+  `,
 }

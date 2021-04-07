@@ -6,7 +6,12 @@ const colors = {
   }
 }
 
-const breakpoint = '399px'
+const breakpoint = ['399px', '680px']
+
+const fontSize = {
+  navbarNormal: '1.5rem',
+  navbarMin: '0.875rem'
+}
 
 export const space = [
   '0',
@@ -26,5 +31,6 @@ export const space = [
 export const theme = {
   breakpoint,
   colors,
+  fontSize,
   space
 }
